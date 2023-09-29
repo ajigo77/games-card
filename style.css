@@ -1,0 +1,187 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --bg-main:#7091F5;
+    --bg-btn:#FFC436;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+.wrapper {
+    display: flex;
+    box-sizing: content-box;
+    width: 30em;
+    padding: 5em 5em;
+    margin: 3em auto;
+    /* background: linear-gradient(180deg, #CAEDFF -10%, #332FD0 90%); */
+    background: transparent;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    left: 50%;
+    top: 50%;
+    border-radius: 0.6em;
+    box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.4);
+    flex-wrap: wrap;
+}
+
+.game-container {
+    position: relative;
+    width: 100%;
+    display: grid;
+    gap: 0.6em;
+}
+
+.stats-container {
+    text-align: bottom;
+    margin-bottom: 1.2em;
+    font-size: 20px;
+    display: block;
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    margin-left: 15px;
+}
+
+#time-count {
+    color: #00DFA2;
+    /* position: fixed; */
+}
+
+#time {
+    /* position: fixed; */
+    color:#ffffff;
+}
+
+.stats-container span {
+    font-weight: 600;
+}
+
+.card-container {
+    position: relative;
+    width: 5.20em;
+    height: 5.20em;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    left: 10px;
+    top: 0;
+}
+
+.card-before,
+.card-after {
+    position: absolute;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #000000;
+    transition: transform 0.7s ease-out;
+    backface-visibility: hidden;
+}
+
+.card-before {
+    background-color: var(--bg-main);
+    font-size: 2.8em;
+    font-weight: 600;
+}
+
+.card-after {
+    background-color: #ffffff;
+    transform: rotateY(180deg);
+}
+
+.card-container.flipped .card-before {
+    transform: rotateY(180deg);
+}
+
+.card-container.flipped .card-after {
+    transform: rotateY(0deg);
+}
+
+.controls-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-main);
+    top: 0;
+}
+
+button {
+    border: none;
+    border-radius: 0.3em;
+    padding: 1em 1.5em;
+    cursor: pointer;
+}
+
+#stop {
+    font-size: 1.1em;
+    display: block;
+    margin: 1em auto 0 auto;
+    background-color: var(--bg-btn);
+    color: #000000;
+    font-weight: 500;
+}
+
+#stop:active {
+    background-color: #F24C3D;
+}
+
+.controls-container button {
+    font-size: 1.3em;
+    box-shadow: 0 0.6em 2em rgba(86, 66, 0, 0.2);
+    font-size: 20px;
+    font-family: 'Popins',sans-serif;
+    font-weight: 500;
+    background-color: var(--bg-btn);
+    position: relative;
+    transition: transform .3s;
+}
+
+#sound1,
+#sound2,
+#sound3,
+#sound4 {
+    display: none;
+}
+
+.controls-container button:hover{
+    background-color: #00DFA2;
+}
+
+.hide {
+    display: none;
+}
+
+#result {
+    text-align: center;
+}
+
+#result h2 {
+    font-size: 2.5em;
+    color:#00DFA2;
+    stroke: #000000;
+}
+
+#result h4 {
+    font-size: 1.8em;
+    margin: 0.6em 0 1em 0;
+    color: #000000;
+}
