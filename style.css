@@ -18,11 +18,10 @@ body {
     display: flex;
     box-sizing: content-box;
     width: 30em;
-    padding: 5em 5em;
-    margin: 3em auto;
-    /* background: linear-gradient(180deg, #CAEDFF -10%, #332FD0 90%); */
+    padding: 7em 5em;
+    margin: 4em auto;
     background: transparent;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
     position: absolute;
     transform: translate(-50%, -50%);
     align-items: center;
@@ -31,6 +30,7 @@ body {
     border-radius: 0.6em;
     box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.4);
     flex-wrap: wrap;
+    flex-direction:column;
 }
 
 .game-container {
@@ -38,17 +38,18 @@ body {
     width: 100%;
     display: grid;
     gap: 0.6em;
+    margin-top:35px;
+    bottom:0;
 }
 
 .stats-container {
-    text-align: bottom;
-    margin-bottom: 1.2em;
+    margin:20px 20px;
     font-size: 20px;
-    display: block;
     position: absolute;
-    right: 10px;
-    bottom: 0;
-    margin-left: 15px;
+    right: 12px;
+    display:fixed;
+    top:5px;
+    z-index:10;
 }
 
 #time-count {
@@ -121,7 +122,6 @@ body {
     width: 100%;
     height: 100%;
     background-color: var(--bg-main);
-    top: 0;
 }
 
 button {
@@ -129,6 +129,10 @@ button {
     border-radius: 0.3em;
     padding: 1em 1.5em;
     cursor: pointer;
+}
+
+button #start {
+    display:none;
 }
 
 #stop {
@@ -170,15 +174,19 @@ button {
     display: none;
 }
 
+.visible {
+    display: block;
+}
+
 #result {
     text-align: center;
 }
 
-#result h2 {
+/* #result h2 {
     font-size: 2.5em;
     color:#00DFA2;
     stroke: #000000;
-}
+} */
 
 #result h4 {
     font-size: 1.8em;

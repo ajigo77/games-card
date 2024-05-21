@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- CDN SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- CDN Tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- CDN Boxicon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./src/icon/favicon.png" type="image/x-icon">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="stats-container">
+        <div id="moves-count"></div>
+        <div id="time"></div>
+      </div>
+      <div class="game-container"></div>
+      <button id="stop" onclick="gameStop()" class="p-3 rounded-md">Stop Game</button>
+    </div>
+    <div class="controls-container">
+      <div class="mb-3 p-4">
+        <h1 class="text-4xl font-bold capitalize flex">Pengaturan bermain <i class='bx bx-joystick bx-lg ml-2 text-pink-700'></i></h1>
+        <hr class="border-slate-700 mt-3 border-1">
+        <form action="#">
+          <div class="text-left float-left grid grid-cols-2 gap-3 mt-8">
+            <label for="selected" class="text-lg font-semibold my-2 capitalize">Pilih level :</label>
+            <select id="level" class="p-3 border-none outline-none focus:ring-2 focus:ring-slate-700 rounded-md">
+              <option value="easy">Easy</option>
+              <option value="normal">Normal</option>
+              <option value="hard">Hard</option>
+            </select>
+          
+            <label for="moves" class="text-lg font-semibold capitalize">kesempatan mencoba :</label>
+            <select id="kesempatan" class="p-3 border-none outline-none focus:ring-2 focus:ring-slate-700 rounded-md">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="30">30</option>
+              <option value="40">40</option>
+              <option value="50">50</option>
+            </select>
+          </div>
+          </div>
+          <button id="start" class="p-3 rounded-md mt-6" onclick="gameStart()">Start Game</button>
+        </form>
+      <p id="result"></p>
+      <audio src="sound/start-sound.wav" id="sound1" controls></audio>
+      <audio src="sound/click.wav" id="sound2" controls></audio>
+      <audio src="sound/win-sound.wav" id="sound3" controls></audio>
+      <audio src="sound/stop-sound.wav" id="sound4" controls></audio>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
