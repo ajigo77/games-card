@@ -19,7 +19,7 @@ body {
     box-sizing: content-box;
     width: 30em;
     padding: 7em 5em;
-    margin: 4em auto;
+    margin: 5px auto;
     background: transparent;
     backdrop-filter: blur(15px);
     position: absolute;
@@ -29,17 +29,18 @@ body {
     top: 50%;
     border-radius: 0.6em;
     box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.4);
-    flex-wrap: wrap;
     flex-direction:column;
 }
 
 .game-container {
     position: relative;
-    width: 100%;
     display: grid;
-    gap: 0.6em;
+    gap: 10px;
     margin-top:35px;
     bottom:0;
+    justify-content:center;
+    align-items:center;
+    margin:0px auto;
 }
 
 .stats-container {
@@ -53,13 +54,11 @@ body {
 }
 
 #time-count {
-    color: #00DFA2;
-    /* position: fixed; */
+    color: #000000;
 }
 
 #time {
-    /* position: fixed; */
-    color:#ffffff;
+    color:#000000;
 }
 
 .stats-container span {
@@ -71,13 +70,10 @@ body {
     width: 5.20em;
     height: 5.20em;
     cursor: pointer;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
-    flex-wrap: wrap;
     box-sizing: border-box;
-    left: 10px;
-    top: 0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card-before,
@@ -92,6 +88,7 @@ body {
     border: 3px solid #000000;
     transition: transform 0.7s ease-out;
     backface-visibility: hidden;
+    flex-direction:column;
 }
 
 .card-before {
@@ -138,7 +135,7 @@ button #start {
 #stop {
     font-size: 1.1em;
     display: block;
-    margin: 1em auto 0 auto;
+    margin: 2em auto 0 auto;
     background-color: var(--bg-btn);
     color: #000000;
     font-weight: 500;
