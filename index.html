@@ -32,14 +32,14 @@
         <form action="#">
           <div class="text-left float-left grid grid-cols-2 gap-3 mt-8">
             <label for="selected" class="text-lg font-semibold my-2 capitalize">Pilih level :</label>
-            <select id="level" class="p-3 border-none outline-none focus:ring-2 focus:ring-slate-700 rounded-md">
+            <select id="level" class="p-3 border-none outline-none focus:ring-2 focus:ring-slate-700 hover:cursor-pointer rounded-md">
               <option value="easy">Easy</option>
               <option value="normal">Normal</option>
               <option value="hard">Hard</option>
             </select>
           
             <label for="moves" class="text-lg font-semibold capitalize">kesempatan mencoba :</label>
-            <select id="kesempatan" class="p-3 border-none outline-none focus:ring-2 focus:ring-slate-700 rounded-md">
+            <select id="kesempatan" class="p-3 border-none outline-none focus:ring-2 focus:ring-slate-700 hover:cursor-pointer rounded-md">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -64,6 +64,8 @@
       <audio src="sound/click.wav" id="sound2" controls></audio>
       <audio src="sound/win-sound.wav" id="sound3" controls></audio>
       <audio src="sound/stop-sound.wav" id="sound4" controls></audio>
+      <audio src="sound/loop-sound.mp3" id="sound5" controls loop></audio>
+      <audio src="sound/lost-sound.mp3" id="sound6" controls></audio>
     </div>
     <!-- Script -->
     <script src="script.js"></script>

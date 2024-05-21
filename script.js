@@ -20,6 +20,8 @@ const sound1 = document.getElementById("sound1");
 const sound2 = document.getElementById("sound2");
 const sound3 = document.getElementById("sound3");
 const sound4 = document.getElementById("sound4");
+const sound5 = document.getElementById("sound5");
+const sound6 = document.getElementById("sound6");
 
 const items1 = [
   {
@@ -123,210 +125,6 @@ const items1 = [
     image: "src/singa.png",
   },
 ];
-// const items2 = [
-//   {
-//     name: "anjing",
-//     image: "src/anjing.png",
-//   },
-//   {
-//     name: "ayam",
-//     image: "src/ayam.png",
-//   },
-//   {
-//     name: "banteng",
-//     image: "src/banteng.png",
-//   },
-//   {
-//     name: "bebek",
-//     image: "src/bebek.png",
-//   },
-//   {
-//     name: "domba",
-//     image: "src/domba.png",
-//   },
-//   {
-//     name: "embe",
-//     image: "src/embe.png",
-//   },
-//   {
-//     name: "kambing",
-//     image: "src/kambing.png",
-//   },
-//   {
-//     name: "kucing",
-//     image: "src/kucing.png",
-//   },
-//   {
-//     name: "kuda",
-//     image: "src/kuda.png",
-//   },
-//   {
-//     name: "merak",
-//     image: "src/merak.png",
-//   },
-//   {
-//     name: "puyuh",
-//     image: "src/puyuh.png",
-//   },
-//   {
-//     name: "sapi",
-//     image: "src/sapi.png",
-//   },
-//   {
-//     name: "ular",
-//     image: "src/ular.png",
-//   },
-//   {
-//     name: "penyu",
-//     image: "src/penyu.png",
-//   },
-//   {
-//     name: "monyet",
-//     image: "src/monyet.png",
-//   },
-//   {
-//     name: "pinguin",
-//     image: "src/pinguin.png",
-//   }
-//   // {
-//   //   name: "scorpions",
-//   //   image: "src/scorpions.png",
-//   // },
-//   // {
-//   //   name: "lebah",
-//   //   image: "src/lebah.png",
-//   // },
-//   // {
-//   //   name: "nyamuk",
-//   //   image: "src/nyamuk.png",
-//   // },
-//   // {
-//   //   name: "loverbird",
-//   //   image: "src/loverbird.png",
-//   // },
-//   // {
-//   //   name: "tupai",
-//   //   image: "src/tupai.png",
-//   // },
-//   // {
-//   //   name: "koala",
-//   //   image: "src/koala.png",
-//   // },
-//   // {
-//   //   name: "katak",
-//   //   image: "src/katak.png",
-//   // },
-//   // {
-//   //   name: "elang",
-//   //   image: "src/elang.png",
-//   // },
-//   // {
-//   //   name: "singa",
-//   //   image: "src/singa.png",
-//   // },
-// ];
-// const items3 = [
-//   {
-//     name: "anjing",
-//     image: "src/anjing.png",
-//   },
-//   {
-//     name: "ayam",
-//     image: "src/ayam.png",
-//   },
-//   {
-//     name: "banteng",
-//     image: "src/banteng.png",
-//   },
-//   {
-//     name: "bebek",
-//     image: "src/bebek.png",
-//   },
-//   {
-//     name: "domba",
-//     image: "src/domba.png",
-//   },
-//   {
-//     name: "embe",
-//     image: "src/embe.png",
-//   },
-//   {
-//     name: "kambing",
-//     image: "src/kambing.png",
-//   },
-//   {
-//     name: "kucing",
-//     image: "src/kucing.png",
-//   },
-//   {
-//     name: "kuda",
-//     image: "src/kuda.png",
-//   },
-//   {
-//     name: "merak",
-//     image: "src/merak.png",
-//   },
-//   {
-//     name: "puyuh",
-//     image: "src/puyuh.png",
-//   },
-//   {
-//     name: "sapi",
-//     image: "src/sapi.png",
-//   },
-//   {
-//     name: "ular",
-//     image: "src/ular.png",
-//   },
-//   {
-//     name: "penyu",
-//     image: "src/penyu.png",
-//   },
-//   {
-//     name: "monyet",
-//     image: "src/monyet.png",
-//   },
-//   {
-//     name: "pinguin",
-//     image: "src/pinguin.png",
-//   },
-//   {
-//     name: "scorpions",
-//     image: "src/scorpions.png",
-//   },
-//   {
-//     name: "lebah",
-//     image: "src/lebah.png",
-//   },
-//   {
-//     name: "nyamuk",
-//     image: "src/nyamuk.png",
-//   },
-//   {
-//     name: "loverbird",
-//     image: "src/loverbird.png",
-//   },
-//   {
-//     name: "tupai",
-//     image: "src/tupai.png",
-//   },
-//   {
-//     name: "koala",
-//     image: "src/koala.png",
-//   },
-//   {
-//     name: "katak",
-//     image: "src/katak.png",
-//   },
-//   {
-//     name: "elang",
-//     image: "src/elang.png",
-//   },
-//   {
-//     name: "singa",
-//     image: "src/singa.png",
-//   },
-// ];
 
 //Initial win count
 let winCount = 0;
@@ -345,18 +143,19 @@ function gameStart() {
     });
   } else {
     sound1.play();
+    sound5.play();
     movesCount = parseInt(peluang.value);
     seconds = 0;
 
     let size;
     if (level.value === "easy") {
-      size = 3; // 3x3
+      size = 2;
       minutes = 1;
     } else if (level.value === "normal") {
-      size = 4; // 4x4 matrix
+      size = 4;
       minutes = 2;
     } else if (level.value === "hard") {
-      size = 6; // 6x6 matrix
+      size = 6;
       minutes = 4;
     }
 
@@ -368,7 +167,7 @@ function gameStart() {
     // Start timer
     interval = setInterval(timeGenerator, 1000);
     // Initial moves
-    moves.innerHTML = `<span>Peluang:</span> ${movesCount}`;
+    moves.innerHTML = `<span>Peluang : ${movesCount} </span>`;
 
     let cardValues = generateRandom(size);
     matrixGenerator(cardValues, size);
@@ -380,12 +179,11 @@ const timeGenerator = () => {
       minutes -= 1;
       seconds = 59;
     } else {
-      if (movesCount === 0 || minutes === 0 || seconds === 0) {
-        gameStop();
+      if (minutes === 0 || seconds === 0) {
         popupLost();
+        clearInterval(interval);
+        return;
       }
-      clearInterval(interval);
-      return;
     }
   } else {
     seconds -= 1;
@@ -393,11 +191,21 @@ const timeGenerator = () => {
 
   let secondsValue = seconds < 10 ? `0${seconds}` : seconds;
   let minutesValue = minutes < 10 ? `0${minutes}` : minutes;
-  timeValue.innerHTML = `<span>Time:</span> ${minutesValue}:${secondsValue}`;
+  timeValue.innerHTML = `<span>Time : ${minutesValue}:${secondsValue}</span>`;
+
+  if (minutes == 0 && seconds <= 30) {
+    timeValue.classList.add("bg-white", "p-1", "rounded-sm");
+  }
 };
 
 const movesCounter = () => {
-  movesCount -= 1;
+  if (movesCount > 1) {
+    movesCount -= 1;
+  } else {
+    popupLost();
+    clearInterval(interval);
+    movesCount = movesCount;
+  }
   moves.innerHTML = `<span>Peluang :</span>${movesCount}`;
 };
 
@@ -433,7 +241,7 @@ const matrixGenerator = (cardValues, size) => {
   let cards = document.querySelectorAll(".card-container");
   cards.forEach((card) => {
     card.addEventListener("click", () => {
-      sound4.play();
+      sound2.play();
       if (!card.classList.contains("matched")) {
         card.classList.add("flipped");
         if (!firstCard) {
@@ -450,19 +258,8 @@ const matrixGenerator = (cardValues, size) => {
             winCount += 1;
             if (winCount == Math.floor(cardValues.length / 2)) {
               //play sound music
-              sound3.play();
-              const popup = Swal.fire({
-                title: "You Win!",
-                text: "Selamat kamu menang",
-                color: "#41B06E",
-                allowEnterKey: true,
-                isComfirmed: controls.classList.remove("hide"),
-                isComfirmed: result.classList.add("hide"),
-                isComfirmed: startButton.classList.add("visible"),
-                imageUrl: "./src/icon/winner.png",
-                imageHeight: 250,
-              });
-              result.innerHTML = `${popup}`;
+              sound5.pause();
+              popupWinner();
               wrapper.classList.add("hide");
               stopGame();
             }
@@ -483,7 +280,9 @@ const matrixGenerator = (cardValues, size) => {
 
 //Stop game
 function gameStop() {
+  location.reload();
   sound4.play();
+  sound5.pause();
   controls.classList.remove("hide");
   wrapper.classList.add("hide");
   stopButton.classList.add("hide");
@@ -492,18 +291,45 @@ function gameStop() {
 }
 
 const popupLost = () => {
+  sound6.play();
+  sound5.pause();
   Swal.fire({
-    title: "You Lost!",
-    text: "Yahahha kamu kalah",
-    color:"#FF1818",
+    title: "Game Over!",
+    text: "Kesempatan tidak datang dua kali, tapi kesempatan datang kepada orang tidak pernah berhenti untuk mencoba",
+    color: "#FF1818",
     allowEnterKey: true,
     isComfirmed: controls.classList.remove("hide"),
     isComfirmed: result.classList.add("hide"),
     isComfirmed: startButton.classList.add("visible"),
     imageUrl: "./src/icon/lost.png",
     imageHeight: 250,
+  }).then((result) => {
+    if (result.isConfirmed) {
+      location.reload();
+      gameStop();
+    }
+  });
+};
+
+const popupWinner = () => {
+  sound3.play();
+  Swal.fire({
+    title: "You Win!",
+    text: "Selamat kamu menang",
+    color: "#41B06E",
+    allowEnterKey: true,
+    isComfirmed: controls.classList.remove("hide"),
+    isComfirmed: result.classList.add("hide"),
+    isComfirmed: startButton.classList.add("visible"),
+    imageUrl: "./src/icon/winner.png",
+    imageHeight: 250,
+  }).then((result) => {
+    if (result.isConfirmed) {
+      location.reload();
+    }
   });
 }
+  
 
 const body = document.body;
 body.addEventListener("mousemove", function (event) {

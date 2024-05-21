@@ -6,7 +6,7 @@
 }
 
 :root {
-    --bg-main:#7091F5;
+    --bg-main:#7066E0;
     --bg-btn:#FFC436;
 }
 
@@ -18,8 +18,8 @@ body {
     display: flex;
     box-sizing: content-box;
     width: 30em;
-    padding: 7em 5em;
-    margin: 5px auto;
+    padding: 5em;
+    margin: 35px auto;
     background: transparent;
     backdrop-filter: blur(15px);
     position: absolute;
@@ -40,12 +40,13 @@ body {
     bottom:0;
     justify-content:center;
     align-items:center;
-    margin:0px auto;
+    margin:8px 5px;
+    padding:10px;
 }
 
 .stats-container {
     margin:20px 20px;
-    font-size: 20px;
+    font-size: 18px;
     position: absolute;
     right: 12px;
     display:fixed;
@@ -62,7 +63,7 @@ body {
 }
 
 .stats-container span {
-    font-weight: 600;
+    font-weight: 300;
 }
 
 .card-container {
@@ -135,7 +136,7 @@ button #start {
 #stop {
     font-size: 1.1em;
     display: block;
-    margin: 2em auto 0 auto;
+    margin: 1em auto 2em auto;
     background-color: var(--bg-btn);
     color: #000000;
     font-weight: 500;
@@ -159,7 +160,9 @@ button #start {
 #sound1,
 #sound2,
 #sound3,
-#sound4 {
+#sound4,
+#sound5,
+#sound6 {
     display: none;
 }
 
